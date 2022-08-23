@@ -16,7 +16,7 @@ This repo is to explore use of [Great Expectations](https://docs.greatexpectatio
 make ge/test
 ```
 
-## Apendix
+## Appendix
 
 
 ### How to run GE CLI locally (Docker)
