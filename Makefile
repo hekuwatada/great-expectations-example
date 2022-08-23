@@ -49,3 +49,8 @@ ge/version:
 ge/test:
 	@echo $@
 	$(MAKE) docker/ge ARGS='checkpoint run checkpoint_model'
+
+.PHONY: ge/suite-edit
+ge/suite-edit:
+	@echo $@
+	$(MAKE) docker/ge ARGS='suite edit dbt_example.my_first_dbt_model.warning -nj -m'
