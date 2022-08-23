@@ -10,10 +10,10 @@ This repo is to explore use of [Great Expectations](https://docs.greatexpectatio
 - [ ] Have expectations executed regularly
 - [ ] Add scripts to create the SUT table
 
-## How to run assertions locally
+## How to run validation checkpoint locally
 
 ```
-make dataform/test
+make ge/test
 ```
 
 ## Apendix
@@ -142,6 +142,19 @@ jupyter notebook /workspaces/ge/great_expectations/uncommitted/edit_dbt_example.
 
 Generated expectations will be saved in `expectations/<dataset name>/<table name>/warning.json`
 
+12. Run Validation to create a Checkpoint
+
+```
+great_expectations checkpoint new checkpoint_model --no-jupyter
+```
+
+13. Run the Jupyter notebook and access it with a token at `http://127.0.0.1:8888/?token=<generated token>`
+
+```
+jupyter notebook /workspaces/ge/great_expectations/uncommitted/edit_checkpoint_checkpoint_model.ipynb  --allow-root --ip=0.0.0.0
+```
+
+14. Access Data Docs at `http://127.0.0.1:8888/view/data_docs/local_site/index.html`
 
 
 ### References

@@ -45,4 +45,7 @@ ge/version:
 	@echo $@
 	$(MAKE) docker/ge ARGS='--version'
 
-
+.PHONY: ge/test
+ge/test:
+	@echo $@
+	$(MAKE) docker/ge ARGS='checkpoint run checkpoint_model'
