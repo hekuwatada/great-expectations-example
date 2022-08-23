@@ -23,6 +23,7 @@ docker/run:
 		--mount src="${HOME}/.config/gcloud",target=/root/.config/gcloud,type=bind \
 		--workdir /workspaces/$(PROJECT_DIR) \
 		--entrypoint /bin/bash \
+		-p 8888:8888 \
 		$(DOCKER_IMAGE_TAG)
 
 .PHONY: docker/ge
@@ -32,6 +33,7 @@ docker/ge:
 		--mount src="$$(pwd)",target=/workspaces,type=bind \
 		--mount src="${HOME}/.config/gcloud",target=/root/.config/gcloud,type=bind \
 		--workdir /workspaces/$(PROJECT_DIR) \
+		-p 8888:8888 \
 		$(DOCKER_IMAGE_TAG) \
 		$(ARGS)
 
