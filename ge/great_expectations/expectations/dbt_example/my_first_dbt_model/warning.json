@@ -1,7 +1,25 @@
 {
   "data_asset_type": null,
   "expectation_suite_name": "dbt_example.my_first_dbt_model.warning",
-  "expectations": [],
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "id"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 2,
+        "min_value": 2
+      },
+      "meta": {}
+    }
+  ],
   "ge_cloud_id": null,
   "meta": {
     "citations": [
@@ -16,6 +34,11 @@
         "comment": "Created suite added via CLI"
       }
     ],
+    "columns": {
+      "id": {
+        "description": ""
+      }
+    },
     "great_expectations_version": "0.15.19"
   }
 }
