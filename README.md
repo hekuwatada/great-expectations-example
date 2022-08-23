@@ -4,9 +4,9 @@ This repo is to explore use of [Great Expectations](https://docs.greatexpectatio
 
 ## Tasks
 
-- [ ] Add Dockerfile to run GE CLI
+- [x] Add Dockerfile to run GE CLI
 - [ ] Add devcontainer.json for VSCode
-- [ ] Add expectations
+- [x] Add expectations
 - [ ] Have expectations executed regularly
 - [ ] Add scripts to create the SUT table
 
