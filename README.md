@@ -18,7 +18,8 @@ make ge/test
 
 ## Apendix
 
-### How to run GE CLI locally (Docker)
+
+### How to run GE CLI locally (Docker)
 
 To be inside the container, run:
 
