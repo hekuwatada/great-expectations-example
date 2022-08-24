@@ -54,3 +54,11 @@ ge/test:
 ge/suite-edit:
 	@echo $@
 	$(MAKE) docker/ge ARGS='suite edit dbt_example.my_first_dbt_model.warning -nj -m'
+
+##############################
+# Dev utilities
+##############################
+.PHONY: dev/lint
+dev/lint:
+	@echo $@
+	docker run --rm -i ghcr.io/hadolint/hadolint < Dockerfile
